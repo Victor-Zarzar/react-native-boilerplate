@@ -1,11 +1,11 @@
-import "@/global.css";
-
+import "@/shared/global.css";
 import { ThemeProvider } from "@react-navigation/native";
 import { PortalHost } from "@rn-primitives/portal";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { NAV_THEME } from "@/lib/theme";
 import { useColorScheme } from "nativewind";
+import { NAV_THEME } from "@/shared/lib/theme";
+import "../../i18n";
 
 export {
 	// Catch any errors thrown by the Layout component.
