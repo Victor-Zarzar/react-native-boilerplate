@@ -1,73 +1,208 @@
-# Minimal Template
+<h1 align="center" id="header">
+  React Native Boilerplate
+</h1>
 
-This is a [React Native](https://reactnative.dev/) project built with [Expo](https://expo.dev/) and [React Native Reusables](https://reactnativereusables.com).
+<p align="center">
+  <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native">
+  <img src="https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white" alt="Expo">
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Expo_Router-000000?style=for-the-badge&logo=expo&logoColor=white" alt="Expo Router">
+  <img src="https://img.shields.io/badge/NativeWind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="NativeWind">
+  <img src="https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white" alt="Bun">
+  <img src="https://img.shields.io/badge/CI/CD-GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions">
+</p>
 
-It was initialized using the following command:
-
-```bash
-npx @react-native-reusables/cli@latest init -t react-native-boilerplate
-```
-
-## Getting Started
-
-To run the development server:
-
-```bash
-    npm run dev
-    # or
-    yarn dev
-    # or
-    pnpm dev
-    # or
-    bun dev
-```
-
-This will start the Expo Dev Server. Open the app in:
-
-- **iOS**: press `i` to launch in the iOS simulator _(Mac only)_
-- **Android**: press `a` to launch in the Android emulator
-- **Web**: press `w` to run in a browser
-
-You can also scan the QR code using the [Expo Go](https://expo.dev/go) app on your device. This project fully supports running in Expo Go for quick testing on physical devices.
-
-## Adding components
-
-You can add more reusable components using the CLI:
-
-```bash
-npx react-native-reusables/cli@latest add [...components]
-```
-
-> e.g. `npx react-native-reusables/cli@latest add input textarea`
-
-If you don't specify any component names, you'll be prompted to select which components to add interactively. Use the `--all` flag to install all available components at once.
-
-## Project Features
-
-- ⚛️ Built with [Expo Router](https://expo.dev/router)
-- 🎨 Styled with [Tailwind CSS](https://tailwindcss.com/) via [Nativewind](https://www.nativewind.dev/)
-- 📦 UI powered by [React Native Reusables](https://github.com/founded-labs/react-native-reusables)
-- 🚀 New Architecture enabled
-- 🔥 Edge to Edge enabled
-- 📱 Runs on iOS, Android, and Web
-
-## Learn More
-
-To dive deeper into the technologies used:
-
-- [React Native Docs](https://reactnative.dev/docs/getting-started)
-- [Expo Docs](https://docs.expo.dev/)
-- [Nativewind Docs](https://www.nativewind.dev/)
-- [React Native Reusables](https://reactnativereusables.com)
-
-## Deploy with EAS
-
-The easiest way to deploy your app is with [Expo Application Services (EAS)](https://expo.dev/eas).
-
-- [EAS Build](https://docs.expo.dev/build/introduction/)
-- [EAS Updates](https://docs.expo.dev/eas-update/introduction/)
-- [EAS Submit](https://docs.expo.dev/submit/introduction/)
+<p align="center">
+  Production-ready React Native boilerplate powered by Expo Router, NativeWind, and React Native Reusables.
+</p>
 
 ---
 
-If you enjoy using React Native Reusables, please consider giving it a ⭐ on [GitHub](https://github.com/founded-labs/react-native-reusables). Your support means a lot!
+<h2 id="stack">
+  Tech Stack
+</h2>
+
+<p>
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/React-Dark.svg" width="48" title="React Native">
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/TypeScript.svg" width="48" title="TypeScript">
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/TailwindCSS-Dark.svg" width="48" title="NativeWind">
+</p>
+
+<h2 id="quick-start">
+  Quick Start
+</h2>
+
+### Using Bun (Recommended)
+
+```bash
+bunx degit Victor-Zarzar/react-native-boilerplate my-app
+cd my-app
+bun install
+bun run dev
+```
+
+### Using npm
+
+```bash
+npx degit Victor-Zarzar/react-native-boilerplate my-app
+cd my-app
+npm install
+npm run dev
+```
+
+---
+
+### Core Technologies
+
+- **React Native** – Cross-platform mobile framework
+- **Expo SDK** – Development platform and tooling
+- **Expo Router** – File-based routing
+- **TypeScript** – Type-safe development
+- **NativeWind** – Tailwind CSS for React Native
+- **React Native Reusables** – Accessible UI component system
+
+---
+
+<h2 id="features">
+  Key Features
+</h2>
+
+- Production-ready scalable structure
+- File-based routing with Expo Router
+- Dark mode support
+- Reusable component system preconfigured
+- Edge-to-edge support
+- New Architecture enabled (Fabric + TurboModules)
+- Cross-platform (iOS, Android, Web)
+- Fully compatible with Expo Go
+
+---
+
+<h2 id="prerequisites">
+  Prerequisites
+</h2>
+
+Before starting, ensure you have:
+
+- Node.js (v22+)
+- npm or Bun
+- Expo CLI
+- iOS Simulator (Mac) or Android Emulator
+- Git
+
+---
+
+<h2 id="project-structure">
+  Project Structure
+</h2>
+
+```
+react-native-boilerplate/
+├── app/                     # Expo Router routes
+│   ├── (tabs)/              # Tab navigation
+│   ├── _layout.tsx          # Root layout
+│   └── index.tsx            # Home screen
+├── shared/
+│   ├── components/          # Reusable UI components
+│   │   └── ui/              # React Native Reusables
+│   ├── constants/           # Constants and configs
+│   ├── lib/                 # Utilities
+│   └── global.css           # NativeWind global styles
+├── assets/                  # Images and fonts
+├── app.json                 # Expo configuration
+├── package.json             # Dependencies
+├── tailwind.config.js       # NativeWind config
+├── tsconfig.json            # TypeScript config
+└── babel.config.js          # Babel config
+```
+
+---
+
+<h2 id="usage">
+  Usage
+</h2>
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+or
+
+```bash
+bun run dev
+```
+
+Open the app:
+
+- Press `i` → iOS Simulator
+- Press `a` → Android Emulator
+- Press `w` → Web
+
+Or scan the QR Code using Expo Go on your device.
+
+---
+
+<h2 id="adding-components">
+  Adding Components
+</h2>
+
+```bash
+npx react-native-reusables/cli@latest add input textarea
+```
+
+Install all components:
+
+```bash
+npx react-native-reusables/cli@latest add --all
+```
+
+---
+
+<h2 id="deployment">
+  Deployment
+</h2>
+
+### Using EAS (Recommended)
+
+```bash
+npm install -g eas-cli
+eas login
+eas build
+```
+
+Documentation:  
+https://docs.expo.dev/eas/
+
+---
+
+<h2 id="contributing">
+  Contributing
+</h2>
+
+1. Fork the project
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+---
+
+<h2 id="license">
+  License
+</h2>
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<h2 id="author">
+  Author
+</h2>
+
+Victor Zarzar - [@Victor-Zarzar](https://github.com/Victor-Zarzar)
+
+Project Link: [https://github.com/Victor-Zarzar/react-native-boilerplate](https://github.com/Victor-Zarzar/react-native-boilerplate)
+
+---
