@@ -1,35 +1,57 @@
 {
-	"language": "Idioma",
 	"home": {
-		"title": "Inicio",
-		"welcome": "Bienvenido",
-		"subtitle": "¡App de ejemplo com i18n!",
-		"description": "Esta es una aplicación de ejemplo de React Native que demuestra cómo implementar la internacionalización (i18n) utilizando react-i18next. La aplicación permite a los usuarios cambiar entre diferentes idiomas para una experiencia más localizada.",
-		"exploringLanguages": "Explorando Idiomas",
-		"exploringLanguagesDescription": "Haz clic en las banderas de los países para explorar el contenido de la aplicación en diferentes idiomas.",
-		"learnMore": "¿Quieres saber más?",
-		"repositoryLinkText": "Repositorio del proyecto en GitHub",
-		"articlesLinkText": "Más artículos"
+		"title": "React Native Boilerplate",
+		"subtitle": "Base lista con Expo Router, NativeWind y componentes reutilizables.",
+		"tip": "Consejo: mantén los íconos en Lucide para un tipado perfecto en tu <Icon />."
 	},
-	"features": {
-		"title": "Funcionalidades",
-		"collapsibles": {
-			"i18n": {
-				"title": "Internacionalización con i18next",
-				"description": "Utiliza react-i18next para la gestión de idiomas, permitiendo que la aplicación se localice en diferentes idiomas."
-			},
-			"persistent": {
-				"title": "Selección de Idioma Persistente",
-				"description": "Utiliza AsyncStorage para almacenar de manera persistente el idioma preferido del usuario, proporcionando una experiencia consistente al reiniciar la aplicación."
-			},
-			"fallback": {
-				"title": "Fallback de Idioma",
-				"description": "Utiliza el idioma del dispositivo si no se guarda ninguna preferencia de idioma."
-			},
-			"switching": {
-				"title": "Cambio Fácil de Idioma",
-				"description": "Los usuarios pueden cambiar de idioma tocando las banderas de los países."
-			}
+	"step1Title": "Empieza por el archivo",
+	"step1": "Edita app/(tabs)/index.tsx para comenzar",
+	"step2Title": "Feedback instantáneo",
+	"step2": "Guarda para ver los cambios al instante",
+	"step3Title": "Evoluciona el boilerplate",
+	"step3": "Construye tus funcionalidades encima de esto",
+	"browseDocs": "Abrir docs",
+	"viewGithub": "Ver en GitHub",
+	"appName": "Mi Aplicación",
+	"about": {
+		"title": "Acerca de",
+		"description": "Esta aplicación fue desarrollada con el objetivo de facilitar la creación de aplicaciones React Native utilizando Expo Router, NativeWind, internacionalización (i18n) y soporte para modo oscuro. La propuesta es ofrecer una base moderna y escalable para acelerar el desarrollo.",
+		"developedBy": "Desarrollado por",
+		"url": "www.victorzarzar.com.br"
+	},
+	"tabs": {
+		"home": "Inicio",
+		"settings": "Configuración",
+		"about": "Acerca de"
+	},
+	"common": {
+		"change": "Cambiar",
+		"close": "Cerrar",
+		"selected": "Seleccionado"
+	},
+	"settings": {
+		"title": "Ajustes",
+		"subtitle": "Personaliza tu experiencia.",
+		"appearance": {
+			"title": "Apariencia",
+			"description": "Elige cómo se ve la app."
+		},
+		"language": {
+			"title": "Idioma",
+			"description": "Define el idioma de la aplicación."
 		}
+	},
+	"theme": {
+		"label": "Tema",
+		"hint": "Alterna entre claro y oscuro."
+	},
+	"language": {
+		"label": "Idioma",
+		"current": "Actual: {{lang}}",
+		"selectTitle": "Seleccionar idioma",
+		"selectSubtitle": "Elige el idioma de la app.",
+		"ptBR": "Portugués (Brasil)",
+		"enUS": "Inglés (EE. UU.)",
+		"esES": "Español (España)"
 	}
 }

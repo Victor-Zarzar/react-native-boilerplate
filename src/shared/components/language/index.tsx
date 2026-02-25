@@ -1,83 +1,62 @@
-import React, { useEffect } from "react";
-import { StyleSheet, View, ScrollView, TouchableOpacity } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { ThemedText } from "@/shared/components/text/ThemedText";
+import React from "react";
+import { View, ScrollView, Pressable } from "react-native";
 import { useTranslation } from "react-i18next";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import Brasil from "@/shared/components/language/flags/Brasil";
 import USA from "@/shared/components/language/flags/USA";
 import Spain from "@/shared/components/language/flags/Spain";
+import { Text } from "@/shared/components/ui/text";
 
-const flags = [
-	{ component: Brasil, lang: "pt-BR", name: "Brasil" },
-	{ component: USA, lang: "en-US", name: "USA" },
-	{ component: Spain, lang: "es-ES", name: "Spain" },
-];
+const FLAGS = [
+	{ component: Brasil, lang: "pt-BR", label: "Brasil" },
+	{ component: USA, lang: "en-US", label: "USA" },
+	{ component: Spain, lang: "es-ES", label: "Spain" },
+] as const;
 
-export function Language() {
+export function LanguagePicker({
+	showLabel = true,
+	className,
+}: {
+	showLabel?: boolean;
+	className?: string;
+}) {
 	const { i18n, t } = useTranslation();
-	const currentLanguage = i18n.language;
 
-	useEffect(() => {
-		const loadLanguage = async () => {
-			const savedLanguage = await AsyncStorage.getItem("language");
-			if (savedLanguage) {
-				i18n.changeLanguage(savedLanguage);
-			}
-		};
-		loadLanguage();
-	}, [i18n]);
-
-	const changeLanguage = async (lang: string) => {
+	async function changeLanguage(lang: string) {
 		await AsyncStorage.setItem("language", lang);
 		i18n.changeLanguage(lang);
-	};
+	}
 
 	return (
-		<View style={styles.container}>
-			<ThemedText style={styles.text}>{t("language")}</ThemedText>
+		<View className={className}>
+			{showLabel ? (
+				<Text className="text-sm font-medium">{t("language.label")}</Text>
+			) : null}
+
 			<ScrollView
 				horizontal
 				showsHorizontalScrollIndicator={false}
-				contentContainerStyle={styles.flagsContainer}
+				contentContainerStyle={{ gap: 12, paddingVertical: 10 }}
 			>
-				{flags.map(({ component: Flag, lang, name }) => (
-					<TouchableOpacity
-						key={name}
-						onPress={() => changeLanguage(lang)}
-						style={[
-							styles.flag,
-							currentLanguage === lang && styles.activeFlag,
-							currentLanguage !== lang && styles.inactiveFlag,
-						]}
-					>
-						<Flag width={45} height={45} />
-					</TouchableOpacity>
-				))}
+				{FLAGS.map(({ component: Flag, lang, label }) => {
+					const selected = i18n.language === lang;
+
+					return (
+						<Pressable
+							key={lang}
+							onPress={() => changeLanguage(lang)}
+							className={[
+								"rounded-2xl bg-background p-2",
+								selected ? "border-primary bg-primary/10" : "opacity-70",
+							].join(" ")}
+							accessibilityRole="button"
+							accessibilityLabel={label}
+						>
+							<Flag width={42} height={42} />
+						</Pressable>
+					);
+				})}
 			</ScrollView>
 		</View>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		justifyContent: "center",
-	},
-	flagsContainer: {
-		flexDirection: "row",
-		paddingVertical: 10,
-	},
-	flag: {
-		paddingHorizontal: 10,
-	},
-	activeFlag: {
-		transform: [{ scale: 1.2 }],
-	},
-	inactiveFlag: {
-		opacity: 0.5,
-	},
-	text: {
-		fontSize: 22,
-		lineHeight: 32,
-		marginTop: -6,
-	},
-});

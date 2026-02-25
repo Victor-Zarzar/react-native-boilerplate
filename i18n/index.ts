@@ -5,7 +5,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import translationEn from "./locales/en-US/translation.json";
 import translationPt from "./locales/pt-BR/translation.json";
 import translationEs from "./locales/es-ES/translation.json";
-import { Locale } from "@/shared/types/locale";
+import type { Locale } from "@/shared/types/locale";
 
 export const resources = {
 	"pt-BR": { translation: translationPt },
@@ -21,7 +21,7 @@ const initI18n = async () => {
 	}
 
 	i18n.use(initReactI18next).init({
-		compatibilityJSON: "v3",
+		compatibilityJSON: "v4",
 		resources,
 		lng: savedLanguage,
 		fallbackLng: "en-US",
