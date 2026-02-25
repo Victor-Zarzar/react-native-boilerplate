@@ -53,5 +53,15 @@
 		"ptBR": "Portuguese (Brazil)",
 		"enUS": "English (US)",
 		"esES": "Spanish (Spain)"
+	},
+	"notFound": {
+		"headerTitle": "Oops!",
+		"code": "404",
+		"title": "Page not found",
+		"description": "We couldn't find this screen. The link might be wrong or the route no longer exists.",
+		"actions": {
+			"goHome": "Go to home",
+			"tryAgain": "Go back and try again"
+		}
 	}
 }
