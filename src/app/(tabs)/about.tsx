@@ -1,8 +1,7 @@
-import { View, Linking } from "react-native";
-import { Text } from "@/shared/components/ui/text";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "@react-navigation/native";
-import { Pressable } from "react-native";
+import { useTranslation } from "react-i18next";
+import { Linking, Pressable, View } from "react-native";
+import { Text } from "@/shared/components/ui/text";
 
 export default function About() {
 	const { colors } = useTheme();

@@ -1,13 +1,14 @@
-import React, { useMemo, useState } from "react";
-import { View, Pressable, Modal, Platform } from "react-native";
 import { useTheme } from "@react-navigation/native";
+import { useColorScheme } from "nativewind";
+import type React from "react";
+import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Text } from "@/shared/components/ui/text";
+import { Modal, Platform, Pressable, View } from "react-native";
+import { LanguagePicker } from "@/shared/components/language";
 import { Button } from "@/shared/components/ui/button";
 import { Icon } from "@/shared/components/ui/icon";
-import { useColorScheme } from "nativewind";
+import { Text } from "@/shared/components/ui/text";
 import { THEME_ICONS } from "@/shared/constants/theme-icon";
-import { LanguagePicker } from "@/shared/components/language";
 
 const LANG_OPTIONS = [
 	{ code: "pt-BR", labelKey: "language.ptBR" },

@@ -1,4 +1,4 @@
-import { TextProps } from "react-native";
+import type { TextProps } from "react-native";
 
 export type ThemedTextProps = TextProps & {
 	lightColor?: string;

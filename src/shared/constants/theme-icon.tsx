@@ -1,4 +1,4 @@
-import { Sun, Moon } from "lucide-react-native";
+import { Moon, Sun } from "lucide-react-native";
 
 export const THEME_ICONS = {
 	light: Sun,

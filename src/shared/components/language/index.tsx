@@ -1,10 +1,9 @@
-import React from "react";
-import { View, ScrollView, Pressable } from "react-native";
-import { useTranslation } from "react-i18next";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useTranslation } from "react-i18next";
+import { Pressable, ScrollView, View } from "react-native";
 import Brasil from "@/shared/components/language/flags/Brasil";
-import USA from "@/shared/components/language/flags/USA";
 import Spain from "@/shared/components/language/flags/Spain";
+import USA from "@/shared/components/language/flags/USA";
 import { Text } from "@/shared/components/ui/text";
 
 const FLAGS = [

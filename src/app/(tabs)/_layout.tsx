@@ -1,4 +1,4 @@
-import { NativeTabs, Icon, Label } from "expo-router/unstable-native-tabs";
+import { Icon, Label, NativeTabs } from "expo-router/unstable-native-tabs";
 import { useTranslation } from "react-i18next";
 
 export default function TabLayout() {

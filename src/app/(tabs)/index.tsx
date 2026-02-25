@@ -1,18 +1,17 @@
-import * as React from "react";
-import { ScrollView, View } from "react-native";
 import { useTheme } from "@react-navigation/native";
-import { useTranslation } from "react-i18next";
 import { Link } from "expo-router";
-import { Text } from "@/shared/components/ui/text";
-import { Icon } from "@/shared/components/ui/icon";
-import { Button } from "@/shared/components/ui/button";
 import {
 	ArrowRightIcon,
 	BookOpenIcon,
+	LayersIcon,
 	SparklesIcon,
 	ZapIcon,
-	LayersIcon,
 } from "lucide-react-native";
+import { useTranslation } from "react-i18next";
+import { ScrollView, View } from "react-native";
+import { Button } from "@/shared/components/ui/button";
+import { Icon } from "@/shared/components/ui/icon";
+import { Text } from "@/shared/components/ui/text";
 import type { Step } from "@/shared/types/icon";
 
 export default function Home() {

@@ -1,6 +1,7 @@
 import Svg, { G, Path } from "react-native-svg";
+import type { SvgComponentProps } from "@/shared/types/icon";
 
-function SvgComponent(props: any) {
+function SvgComponent(props: SvgComponentProps) {
 	return (
 		<Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" {...props}>
 			<G strokeWidth="1pt">

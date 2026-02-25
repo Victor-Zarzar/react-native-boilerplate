@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@react-navigation/native";
 import { Stack } from "expo-router";
-import { useColorScheme } from "nativewind";
 import { StatusBar } from "expo-status-bar";
+import { useColorScheme } from "nativewind";
 import { NAV_THEME } from "@/shared/lib/theme";
 import "@/shared/global.css";
 import "../../i18n";
