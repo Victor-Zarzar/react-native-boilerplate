@@ -53,5 +53,15 @@
 		"ptBR": "Português (Brasil)",
 		"enUS": "English (US)",
 		"esES": "Español (España)"
+	},
+	"notFound": {
+		"headerTitle": "Oops!",
+		"code": "404",
+		"title": "Página não encontrada",
+		"description": "Não conseguimos encontrar esta tela. O link pode estar incorreto ou a rota não existe mais.",
+		"actions": {
+			"goHome": "Ir para o início",
+			"tryAgain": "Voltar e tentar novamente"
+		}
 	}
 }

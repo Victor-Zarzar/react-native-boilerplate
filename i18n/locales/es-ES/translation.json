@@ -53,5 +53,15 @@
 		"ptBR": "Portugués (Brasil)",
 		"enUS": "Inglés (EE. UU.)",
 		"esES": "Español (España)"
+	},
+	"notFound": {
+		"headerTitle": "¡Ups!",
+		"code": "404",
+		"title": "Página no encontrada",
+		"description": "No pudimos encontrar esta pantalla. El enlace puede estar mal o la ruta ya no existe.",
+		"actions": {
+			"goHome": "Ir al inicio",
+			"tryAgain": "Volver e intentar de nuevo"
+		}
 	}
 }
