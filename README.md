@@ -84,7 +84,7 @@ npm run dev
 
 Before starting, ensure you have:
 
-- Node.js (v22+)
+- Node.js (v24+)
 - npm or Bun
 - Expo CLI
 - iOS Simulator (Mac) or Android Emulator
@@ -125,13 +125,13 @@ react-native-boilerplate/
 Start the development server:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 or
 
 ```bash
-bun run dev
+npm run dev
 ```
 
 Open the app:
