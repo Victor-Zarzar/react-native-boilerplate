@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  Production-ready React Native boilerplate powered by Expo Router, NativeWind, and React Native Reusables.
+    React Native boilerplate powered by Expo Router, NativeWind, and React Native Reusables. Not production-ready yet — use as a starting point for your own project.
 </p>
 
 ---
