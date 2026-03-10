@@ -15,15 +15,11 @@ export default function RootLayout() {
 			<StatusBar style={theme.dark ? "light" : "dark"} />
 			<Stack
 				screenOptions={{
-					headerShown: true,
-					title: "React Native Boilerplate",
+					headerShown: false,
 					contentStyle: { backgroundColor: theme.colors.background },
 				}}
 			>
-				<Stack.Screen
-					name="(tabs)"
-					options={{ title: "React Native Boilerplate" }}
-				/>
+				<Stack.Screen name="(main)" />
 			</Stack>
 		</ThemeProvider>
 	);
